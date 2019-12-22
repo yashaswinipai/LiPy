@@ -3,7 +3,7 @@ import sys
 class Tree:
     def __init__(self):
         self.dir_count = 0
-        self.fileCount = 0
+        self.file_count = 0
 
     def register(self, absolute):
         if os.path.isdir(absolute):
