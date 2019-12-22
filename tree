@@ -2,16 +2,16 @@ import os
 import sys
 class Tree:
     def __init__(self):
-        self.dirCount = 0
+        self.dir_count = 0
         self.fileCount = 0
 
     def register(self, absolute):
         if os.path.isdir(absolute):
-            self.dirCount += 1
+            self.dir_count += 1
         else:
-            self.fileCount += 1
+            self.file_count += 1
     def summary(self):
-        return str(self.dirCount) + " directories, " + str(self.fileCount) + " files"
+        return str(self.dir_count) + " directories, " + str(self.file_count) + " files"
 
     def walk(self, directory, prefix = ""):
         filepaths = sorted([filepath for filepath in os.listdir(directory)])
